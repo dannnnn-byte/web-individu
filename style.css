@@ -1,0 +1,97 @@
+body {
+    background-color: rgb(92, 114, 152);
+}
+
+.container {
+    background-color: rgba(0, 66, 180,);
+    background-blend-mode: darken;
+    
+}
+
+.tentangsaya {
+    font-family: helvetica;
+    font-size: 110%;
+    text-align: center;
+    color: white;
+    margin-bottom: 1px;
+}
+
+.nama {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    color: white;
+    margin-bottom: 1px;
+}
+
+.nim {
+    color: white;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.isi {
+    font-family: helvetica;
+    font-size: 100%;
+    text-align: center;
+    color: white;
+}
+
+.informatika2024 {
+    font-family: helvetica;
+    flex-wrap: wrap;
+    font-size: 200%;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.biotext {
+    margin-top: 0px;
+    color: lightgray;
+    text-align: center;
+}
+
+.garisatas {
+    margin-top: 40px;
+    margin-bottom: 1px;
+}
+
+.garisbawah {
+    margin-top: 30px;
+}
+
+.fototeman{
+    width: 270px;
+    height: 350px; 
+    margin-left: 1cm;
+    
+}
+
+.temanangkatan {
+    color: white;
+    border-style: outset;
+    border-radius: 1%;
+    border-color: lightgray;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.biotemanangkatan {
+    color: white;
+    border-color: lightgray;
+    display: flex;
+    flex-direction: row;
+}
+
+.fotosaya {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-style: inset;
+    border-color: rgb(215, 208, 208);
+    border-width: 10px;
+}

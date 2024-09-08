@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>240411100035|MOHAMMAD DANI FERDIANSYAH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <hr class="garis bagian atas">
+    <div class="container">
+        <div class="biodata nama">
+            <p class="nama">MOHAMMAD DANI FERDIANSYAH
+                <br> <p class="nim">240411100035</p>
+            </p>
+            <img class="fotosaya" src="dani19.jpg" alt="gambar">
+            <p class="tentangsaya">Tentang saya</p>
+            <p class="isi">Hi, perkenalkan nama saya MOHAMMAD DANI FERDIANSYAH, lahir di Bangkalan 19 MEI 2005,
+                tinggal di perum.citra nova blok E9. , hobi saya adalah bermain sepak bola/futsal,
+            </p>
+        </div>
+    </div>
+    <hr class="garisbawah">
+    <div class="bawahbio">
+        <p class="informatika2024" style="color: white;">BIODATA INFORMATIKA'2024 </p> 
+    <div id="studentList"></div>
+<script>
+    // Fungsi untuk meng-generate list mahasiswa dari JSON
+    function generateStudentList(data) {
+        const studentList = document.getElementById('studentList');
+        data.forEach(student => {
+            const studentDiv = document.createElement('div');
+                const nomor = student.no.split('');
+                if(nomor[0]==0){
+                    nomor[0] = '+62';
+                }
+                const teleponacc = nomor.join('');
+            studentDiv.innerHTML = `<div class="temanangkatan">
+        <div class="f-foto">
+            <img class="fototeman" src="${student.fotoselfie}" alt="">
+        </div>
+        <div class="biotemanangkatan">
+            <table class="tb-data">
+                <tr>
+                        <td class="td" width="150px">Nama</td>
+                        <td>:</td>
+                        <td>${student.nama}</td>
+                    </tr>
+                    <tr>
+                        <td>Nim</td>
+                        <td>:</td>
+                        <td>${student.nim}</td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>:</td>
+                        <td>${student.alamat}</td>
+                    </tr>
+                    <tr>
+                        <td>TTL</td>
+                        <td>:</td>
+                        <td>${student.ttl}</td>
+                    </tr>
+                    <tr>
+                        <td>Telepon</td>
+                        <td>:</td>
+                        <td><a href="https://wa.me/${teleponacc}" target="_blank"> ${teleponacc}<a></td>
+                    </tr>
+
+                  
+            </table>
+        </div>
+    </div>
+            
+           `;
+
+                studentList.appendChild(studentDiv);
+            });
+        }
+        // Mengambil file JSON menggunakan fetch API
+        fetch('data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => generateStudentList(data))
+            .catch(error => console.error('There was a problem with the fetch operation:', error));
+    </script>
+    </body>
+</html>
